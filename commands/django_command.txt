@@ -1,0 +1,23 @@
+setting up 
+> creating a project 
+	django-admin startproject mysite
+> run liteweight server
+ 	py manage.py runserver
+> chanign the port 
+	python manage.py runserver 8080
+> changing the port and server's IP
+	python manage.py runserver 0:8080
+	note: 0 is short for 0.0.0.0
+> check for error
+	python manage.py check
+> generate sql from exsited schema 
+	python manage.py sqlmigrate "name of package" "name of schema"
+
+> generate schema from code
+	python manage.py makemigrations polls
+> display SQL code that migration would run.
+	python manage.py sqlmigrate polls 0001 
+> submit changes to django project
+	python manage.py migrate
+	note: migrate keeps all the changes realted to django project
+	note: djando tracks databashanges usisng a special table in your databasee c

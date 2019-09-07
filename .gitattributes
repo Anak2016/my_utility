@@ -1,0 +1,4 @@
+*.pds filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+research_related/** filter=lfs diff=lfs merge=lfs -text
+config/** filter=lfs diff=lfs merge=lfs -text

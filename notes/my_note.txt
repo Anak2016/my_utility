@@ -1,0 +1,95 @@
+>we usually htin kof type as a functio, because we use it liek one to ge tth class of the object howeer type  is a class it behaves liek a class that creata a new class when invoked wi ththeree argument
+	: The Three arugmentss of type are named na,e bases, and dict -the latter being a mpaping of attribute naem s and attributes for the nwe class. The prcediing code is functionally equaivalent to this
+
+> a class decorator is very similar to a functio ndecorator: it's a fucntio nthat get a clas sobject and return the ame class or a modfired one
+
+> a significant drawback of aclass decorators i that they cat only on the class where they are directly applied. This means subclasses of theecorated class may or may not iherit the changed made by the decorator, depending onwhat those changes are. v
+
+> the interpreter compoiles the function body (if it's the first time tahta module is imported), and binds the funciton object to tis global name, but its does not execute the obdy of the funciont, obbiously. 
+	:This means that the interpreter defines top-lvevl functions at import time, butexecute thier bodyies ony when adn if the funciotn are invoked at runtime.
+
+> for classes, the story is diifferent: at import time, the interpreter executes the obdy of every clas, even the body of classes nested in ohte rclasses. Execution of a class body means that athe attributres and method of the class are defined ,and then the class object itself is built. 
+	: In thyis sens, the body of classe is "top-level codde": it runs at timport imt.e
+	
+
+> the classes object andtype have unique relationship: object is an instane oft ype, and type is a subclas sof object. This relationship is "magic" : it cannot be expressed in Python because either calss would haver to 3exist before the other could be defined. Teh fact htat type is an instance of itself is also msaigcla
+
+> all classes are instnaces of type but metaclasses are also subclasse sso ftype, asothey act as class facotry
+	: IN paritcula ,ametacalass can scutomzie its instances by implementing -_init__ . 
+	: A metaclass __init__ method can do eveyrihign ca class decorator can do, but its efefct are more prodound.
+
+> both the type constructor and the __new __ and __init__ method of metaclasses receieve th body of te class evaluated as am apping of names to attribues. However, by default that mappoign is a dict, that mapping is a dict ,which means the order of the attribuere sas they appear in the class body is lose by the time our metaclass or class decorator can loo kat them 
+	: the solution to this prolem is the __prepare__ , This special method is rellevant only in meta classes, and it must be calss method.\
+
+> The __prepare__method is ainvoked by the interpreter before the __new__ method in the metaclass to reate the mapping tha will be filled with the attribures from the class boyd. 
+	:bESIDES THE METACLASS AS FIRST ARUGMENT, __PREPARE__ GETS THE NAME OF THE CLASS TO BE CONSTRUCED AND ITS  tuple of base classes, and it must return a mapping, which will be recieved as the last afugment by __new__ and then __init__ when the metaclass builds a new class
+
+> usecase of metaclasses is as the following
+	>metasclass are sued in frameworks and libraries that helpe prrogrmamers perform
+	: Atriburte validation 
+	: Object serialization or data conversion 
+	: Object -relationsal mapping
+	: Object-based persistency
+	L Dynamic translation of class strucutre from other langauges.
+
+> every class has a number of attribures defined in the pytho ndata model called special attributes. 
+	: some of these are not reported by thedir() built-in funciton
+	list is as followed
+	: object.__dict__
+	: instance.__class__
+	: class.__bases__
+	: definition.__name__
+	: definition.__qualname__
+		>> the qualified name of the class, function, mehtod, descriptor, or generator instance.
+	: class.__mro__
+	: class.mro()
+		>> this method can be overriden by a metaclass to customize the method resoluton roder for tis 		insstnaces. it is claled at class instantiation, and its result is soted in _mro__
+	: class.__subclass()
+
+
+>Interface segregation principle (ISP)
+	:states that no client shoudl be forced tgo depend on methods it does nto use.
+	:ISP splits interfaces that are very large into smaller and more specific ones so tha clients will only have to know about the methods that are of interest to them.
+	:such shrunken interfaces are also called role interfaces. 
+	:ISP is intended to keep a system decoupled and thus easier to refacto, change, and redeploy.
+
+>SOLID is a mnemonic acronym for five design prinicple intended to make software designs more understandable, flexible and maintainable. 
+	:signle responsibility principle
+		:a class should only have a single responsiblity, that is, only changes to one part of the software's specification should be able to affect the specification of the class.
+	:Open-closed principle
+		:"Software entities... should be open for extension, but closed for modificaiton"
+		such as property in python 
+	:Liskov substitution principle
+		:"Objects in a program should be replaceable with instances of their subtypes without altering the correctness of th program" ????	
+		:basically, classes shoudl be model based on behaviours not on properties.
+	:Interface segregation principle
+		:"Mant client-specific interfaces are better than one general-purpose interface"
+	:Dependency inversion principle
+		:One should' depend upon abstractions, [not] concretions.
+		: High-level modeuls, hich provide complex logic, hsulbe easily reuseable and unaffected by changes in low-level module, which provide utility features. To achieve that, you ened to introduce an abstraction tha tdecouple the high-level and low-level modules form each other.
+
+>substituability 
+	: if S is a subtype of T, then objeccts of type T may be replaced with objects of type S without aaltering anyt of the desiable properties of the program
+
+> goal of Single REsponsiblity Principle and Interface segregation principle is to reduce the side effects and frequency of required changes by splitting the software into multiple, independenet part. 
+	:SRP tell us that you soudl only have a ginle reponsiblity in a module
+	:ISP tells us that you shoudl nto be forced to e confronted with more than yo uactually n3eed. 
+		=> if you want to use a print() method from interface I, you shouldn't have to instantiate a SwimmingPool or a DriveTrru class for that. 
+		
+	:SRP is more focues on the designeer-side point-of-view, whiel ISP is more focused on the client-side point-of-view
+
+> Coupling is alwys bad because ti prevents the replacement of chnages of components independently of the whole. ift's hard seeing a definse against htis, and indeed hard to argue for ti because itappears so self evident. What are some of the consequences of high coupling?
+	:Developer/ maintenance programmers need to understand potentially the whoe system to be able to safftly modify a signel component
+	: Changin reuirements that affect the suitabilit y of some componeent will potentially require wide rangin changes in order to accommodate a more suitable replacement component
+	:More thought need to go into choices at the beginning of the lifetime of a software system in order to attempt ot predict the logn term requirements of the systme because changes are more expensive. 
+ 
+
+
+
+
+
+
+
+
+
+

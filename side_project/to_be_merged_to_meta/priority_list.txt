@@ -1,0 +1,17 @@
+> check AND fix why database does not update new data
+> add auto_increment_id to model of productivity database
+> add delete_by_id method to productivity class
+> check why only the first detail is selected.
+    :make sure that all of the detilas are selected.
+> create keyword dir for survey papers.
+    :create folder for papers/people/"name"/reserch topic
+        eg
+            papers/people/"name"/survey paper
+            papers/people/"name"/GNN
+            papers/people/"name"/CNN
+            ...
+    :write arrange_papers code to fit the new directory structure purposed above.
+
+> create view for django
+    > create option to plot productivity for a chosen period of time 5 days 10 days...
+    > add delete by text/date option

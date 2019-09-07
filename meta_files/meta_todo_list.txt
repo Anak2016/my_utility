@@ -1,0 +1,117 @@
+=============================
+===Rules
+=============================
+> meta_todo_list tracks all todo_list of folder that contains todo_list
+
+=============================
+==Meta_todo_list
+=============================
+-------meta (utility_code + exmaple_code + research_related + side_project + others)
+
+>>>>update<<<<
+-------utility_code
+>in utility code
+> this is first task!!!
+
+
+-------side_project
+
+keyword to search what I am stucking on == "">>HERE<<""
+
+> Writing python_scipt for my_utility project
+    > create function for progress_log and productivity_log
+        : recreate looks of productivity_log table
+            >>HERE<<< #todo unfinished
+            Problem:while doing this I can no longer insert new database
+                run "python __init__.py" to reproduce the error
+            figure out answer to the following question:
+                => how to add new columns to existed database without crashing database?
+                => how to open my sqlite database? how to check if my database exist/created?
+                => is sqlite appropiate for my usecase?
+                => how to prevent crashes to my database?
+                => how to protect/recover my data?
+
+        : learn how to use DB browser (sqlite) offline with my_utility.db
+        : create demo progres_log, meta_progress_log, total_productivity_log, weekly_productility_log
+        : to allow them to be ordered by dates. (use be faily easy once all data are in sqlite database)
+        : create appropriate strucutre to these files as describe in README.txt of my_utility
+        : learn how to use pydot and update snippet  to example code
+            => read https://pythonhaven.wordpress.com/tag/pydot/
+
+    > add parser example code to for the following
+        : update_meta
+        : show top 5 tasks from priority list
+            => it must accpets the followign args
+                priority top_task_to_be_listed
+
+        : select (a list of date or week)/(a date or week) or week of priority list to be displayed its detail
+            => it must accepts the follwoing args
+                week month-date-year month-date-year ...
+                date month-date-year month-date-year ...
+
+    > create flow chart that show how each folders/files are used for and thier relationship
+        :also write instruction of how to use it under rule section of readme.txt
+
+    > figure out an app that supports efficient search engine for code snippet/ code example look up.
+        =>read https://www.makeuseof.com/tag/best-note-taking-tools-programmers/
+
+    > figure out a way to arrange notes by topic
+        : Can i use keywords??
+
+    > create snippet that update meta_file from todo_list, priority_list, and progress_log of folders that contains
+        these files
+    > create function list_top_todo() that list top n todoo from meta_priority_list
+    > create database for meta files thats ordered by date
+        eg
+            meta_productivity_log, and meta_progess_log
+    > merge it with selected app for store and search code snippet.
+    > create function that count percentage of success vs failur from progress_log and output ratio
+
+    > create UI that display nescessary information including and add things that will be easy for user to navigate
+        through each tabs
+        : 2 versions
+            => webbase version
+            => window base version
+        : it must allow some of the information to be display on window background
+
+    > create function that accept/reject notes as qualified/unqualified notes
+
+    > create an app that will automatically detect and update changes in meta_priority_list and meta_todo_list, vice versa is true for automaticlaly detect and update cahnges in the app
+
+    > for my website, create developing, production branches in github
+
+    > plan out the look of my website
+        :create the following pages
+            => blog, portfolio, Notes collection.
+
+> add forex init
+	:creat api to scrap for top 5 forex
+	:implement ai
+
+
+> other project ideas
+	:self drivng car, object detection with gpu, chess ai, chatbot.
+	:create a python automation
+		=>watch https://www.youtube.com/watch?v=qbW6FRbaSl0
+
+> pygame
+	:learn by reading source code (is it better than just follow tutorial???)
+	:create angrybird
+
+
+-------research_related
+>in research_related
+
+
+-------example_code
+>in example_code
+
+
+-------courses
+>in courses
+
+
+-------notes
+
+
+

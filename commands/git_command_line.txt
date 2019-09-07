@@ -1,0 +1,36 @@
+#--------update username
+git config --global user.name "Alvin J. Alexander"
+or
+change it in ~/.gitconfig file
+
+#--------list all git attribute 
+git config --list
+
+#--------list remote url to be pulled and fetch
+git remote show origin
+
+#--------list all branches
+git branch -a
+
+#--------check which branch head is pointing to
+git symbolic-ref HEAD
+
+#--------force push
+git push -f origin master
+
+#--------add origin url
+git remote add origin https://github.com/Anak2016/dd.git
+
+#--------check if it isin  working tree
+git rev-parse --is-inside-work-tree
+
+#--------check if master branch exist
+git ls-remote origin master
+
+#=====================
+#==large files
+#=====================
+git lfs install
+git lfs track "*.psd" # any pattern eg "folder/**" track all files in subfolder recursively
+git add .gitattributes
+

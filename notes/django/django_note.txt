@@ -1,0 +1,111 @@
+https://justswallows.com/video/9ZG/swallow-salon-sweet-megan-winters-will-do-you-orally/
+
+----DATABASE
+> SQLite provde an execllent devlopement alternative for applciations that are predominatly read-only or require a smaller installation footprint.
+> filter() vs get()
+	:the difference is that filter reutns a query set object, wheras get returns the reuqied object.
+	:filter is used when you expect more than just one object to match the criteria
+	:get is used when you expect only one item to matche syour criteria 
+		=> such as id
+		=> it will throw error if the item does not exist or if multiple items exist that match your criteria. you should there fore alwys use it in a try..expect block.
+
+> When you define a relationship in a model (ie a ForeignKey, OneToOneField, or ManyToManyField) instance of that model will have a conveneint API to access the relate dobjects.
+
+----ADMIN
+> Django was written in a newsroo m environement, with a ver clear separration betwen "content publisher" and the "public" site. Site manager use the sustem to add news storyies, event, sport score, etc, and that content is displayed on the publich site. Django sovles the problem of creating a unified interface for site administrator to edit content. 
+	: the admin isn't intended to be used by site visitor. It's for site manager
+
+----Views
+> Class-based views
+	:A view is a callable which takes a request and returns a response. 
+> TEMPLATES
+	:TEMPLATES setting describes how Django will load and rednder templates. 
+	:The default setting file configures a DjangoTEmplates backend whose APP_DIRS options is set to True.
+	:By convention DjangoTEmplates looks ofr "templates" subdirectory in each of the INSTALLED_APPS
+	:template should be at polls/templates/polls/index.html
+		=> you can refer to this template within Django simplay as polls/index.html
+
+> why do we use a helper funciton get_object_or_404() instead of automatically catching th ObjectdoesNotExist exceptiosn at a higher level, or having th modle API raise Http404 instead of ObjectdoesNotExist?
+	:Becuase the would couple the model layer to the view layer. ONe of the foremost design goals of django is to maintain loose coupling. Some controlled coupling is introduced in the django.shortcuts module
+	:Control coupling is one module contorlling theflwo of another, by passing it information on what to do
+
+----TEMPLATE
+> REndering means interpolatng the template with context data and returning the resulting string
+> Jinja2 vs Django 
+	:Jinja2 is a templating library that can be used to simplify the process of gnerating HTML for Python we apps. 
+	:Django, on the other hand, is a full-fluedge MVC framework, which means that it contains libvrayries for things liek databse interaction, routing and cahcing.
+
+> Since most engines laod tmeplated for mfies, the top-level configuration for each engine contain two common setting
+	:DIRS
+		=> defines a5:25 PM 8/20/2019 list of derectories where the engine should look for template source file, in  search order 
+	:APP_DIRS
+		=>tell whether the engine should look for template inside installed aplplications. Each backend defines a conventional name for the subdirectory inside applciation where its templates shoudl be stored. 
+	:OPTIONS
+		=> contains backend-specific setting
+>A Django template is simpley a text document or a Python string marked-up using the Django template langauge. Some constructs are recognized and interpreted by the template engine. The main ones are varaibles andtags
+>The syntax of the Django template language involves four constructs
+	:Variables 
+		=> a variable outputs a value from the context, whichc is a dick-like oject mapping keys to values 
+	:Tags
+		=> TAgs rovide arbitrary logic in the rendering process 
+		=> Most tags accept arguments
+		eg. {%cycle 'odd' 'even'%} where odd and even are arguments
+	:Filters
+		=> Filters tranform the values of varialbe adn tags arguments
+		eg. {{django|title}} display the value of {{name} varaible after being filtered throught the title filter
+		=> some filter takes an argument
+	
+	:comments
+
+> Using the tmeplate sysmte in python is a three-step process:
+	1. Your configure an Engine
+	2. You compile tempalte code into a template
+	3. You render the template with a Context
+
+
+>Built-in backend
+	When APP_DIRS is True, DjangoTemplates engines look for tempaltes in teh tempaltes subdirectory of install applciations. Thsi generic name was kept for backwards-compatibility.
+
+> Rendering a context
+	:Once you ahve a compiled Tempalte object, you can render a context with it. 
+	:YOU can reuse the same template to render it serverla times with different context. 
+
+> Variables and lookups 
+	:Varaible names must consist of any letter (A-Z), any digit (0-8), and underscore (but thye msut not start with an underscore ) or a dot. 
+	:Dots have a specialmeaning intemplate rendering. A dot in va vairalbe name signified a lookup. Specifically, when the template system encounter a dot in a variable name, it tried the follwogin lookups, in this order
+		1.Dictionary lookup eg. foo["bar"] seach by text
+			eg.  d = {"person": {"first_name": "Joe", "last_name": "Johnson"}}
+		2.Attributre loopup. eg. foo.bar seach by text
+			eg. 
+			class PersonClass: pass
+			p = PersonClass()
+			p.first_name = "Ron"
+			p.last_name = "Nasty"
+		3.List-index lookup eg. foo[bar] == foo.bar where bar is a number 
+			eg. c = Context({"stooges": ["Larry", "Curly", "Moe"]})
+
+		note: 
+			=>if any part of the varialbe is callabl,e the tempalte system will try calling it. 
+			=>a variable can only be called if ithas no required arguments. Other wise the system will retur nthe value of the engine's string-if _invalid option.
+			=>there can be side effect when calleing some variables. 
+				eg. delete()
+				:=> to prevent htis, set an alters_data attiubte on the callable vairabel.
+				
+
+> Variable look explains
+	:Variable have to be dict like objec. first it try ti access variable with string (dict). then it tries to access the variable with attribute (attr lookup). lastly it try to access variable with number (in case index is passed as int number)
+
+> How invalid variables are handled
+	:Gnerally, if a vaialbe doesno't exist, thet empalte system inserts the value of theengine's estring_if_invalid configuration option, which is set to '' by default.
+	:Filter will not be applied if string_if_invalid is set to any other value other then ''
+	:this behaviiors is slightly differnt for the if, for and regroup template tags. if an invalid variable is provide dto one of these template tags, the varialbe will be interpreteed as None. 
+		=> filter are always applied to invalid variables with if, for, regroup template tag
+> Context class
+	: The constructor of django.template.Context takes an optional argument - a dictioary mapping variablen maes to variable values. 
+
+> how high level, bakcend agnostic APIs works in Template
+	1. Fr each DjangoTempaltes backend in the TEMPALTES setting Django instantiates an Engine. DjangoTEmplates wraps Engine and adapts it to the common temaplte backend API. 
+	2. The django.template.loader odule provides funciotns such as get_template() for loading templates. They reutrn a django. tempaltes.backends.django.TEmplate which wraps the actual django.templates.TEmpalte.
+	3. The Tempalte obtains int the previous step has a render() method which marchsls a context and possibly a request into a Contet and delegate the rendering to the udnerlying TEmplates. 
+
+	

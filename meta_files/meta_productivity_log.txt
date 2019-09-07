@@ -1,0 +1,31 @@
+=============================
+===Rules
+=============================
+> meta_productivity_log tracks all productivity_log of folder that contains productivity_log
+
+=============================
+==Meta_todo_list
+=============================
+
+>>>>update<<<<
+-------utility_code
+>in utility_code
+
+
+-------side_project
+>in side_project
+
+
+-------research_related
+>in research_related
+
+
+-------example_code
+>in example_code
+
+
+-------courses
+>in coursea
+
+
+

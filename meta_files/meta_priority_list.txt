@@ -1,0 +1,176 @@
+=============================
+===Rules
+=============================
+> meta_priority_list tracks all priority_list of folder that contains priority_list.
+
+=============================
+==Meta_todo_list
+=============================
+
+-------meta (utility_code + exmaple_code + research_related + side_project + others)
+#=====================
+#==waiting list
+#=====================
+#--------long term priority
+> watcha all MIT Deep Learning in 1 week (deadline 8/14/2019)
+    :14 videos so 2 video a day.
+> finish Sendex tutorial on self driving car (maximum 3 hours, sep 10 2019 )
+    :Goal is to get a feel of what kinds of programming I need to build autonomous car.
+    url: https://pythonprogramming.net/introduction-self-driving-autonomous-cars-carla-python/
+
+#--------todo 1 here>>
+> check whether or not I can use Jetson from dr zhu to build self driving car
+    :if the asnswer is yes, figure out what parts do I need to buy to fully build self seriving car.
+
+> read syllbus and watch first lecture of foundation of ai and figure out what I need to do for project/papers review.
+    :find out what the following is
+        > Rejection sampling and approximate Bayesian computation
+        > Markov chain Monte Carlo
+        > Importance sampling
+        > Canonical correlation analysis
+        > Mutidimensional scaling
+        > Gaussian processregression
+        > Functional data analysis
+        > Markov random fields vs hidden markov model
+        > Particle filters
+        > Self-organizing maps
+        > Boltzmann machines
+        > Applications of graphical models in artificial intelligence
+        > Biclustering
+        > Averaged one-dependence estimation
+
+> read 1 papers on the far left about graph.
+> work on writing report.
+
+==> go to research_related
+==> go to notes
+==> go to side_project
+
+> create a way to link evernote to my_utility project.
+    : create another folder call "my_note" outside of my_utility but in one_drive awannaphasch2016@fau.edu
+    : Should I collect all the note in my_utility project??
+
+> write in README.txt how to use each command including
+    :update papers
+    :update meta file
+    :update progress log to google calendar
+    :update productivity log to sqlite
+
+> download pdf files from trello
+    :arranged downlowed file by topics and update arrange_papers.py accordingly
+
+> export pycharmt setting to config
+
+> use set up tools to setup environment when I move from computer to computer
+    :currently i use config/__init__.py to manually install pip packages and conda packages
+        => this can be done automatically using setuptools
+
+> move code in example_code to cachers.
+    :add comment and create hotkey to search them
+> rewrite Rules section in readme.txt of research_related folder
+> rearrange research paper in research-related.
+> migrate example_code to cacher
+> add html tags in md to add link to folders that contains research papers
+
+> learn how to generate document in pycharm
+    read: https://www.jetbrains.com/help/pycharm/generating-reference-documentation.html
+    :create documentation for my current code in the following
+        =>my_utility, python_script
+
+> test my_utility files and make a video/ blog about it
+> find a way to document my project while I program it including the following formate
+    :text doucment
+    :flowchat
+> exprot config for the follwoing
+    : pycharm plugin
+    :conda environment
+
+> add arg_parse template in exmpale code (snippet)
+
+> convert README.txt to README.md
+    read: https://guides.github.com/features/mastering-markdown/
+    : should i add "doctoc" to automate table fo contetn it required node.js
+
+
+>figure out a way to finetune the following
+    > read BINE paper and algorithm of BINE
+    > algorihm of attentionwalk
+    > algorithm of graph attention
+> read my code and recall what I have done
+
+> create utility function for karate club data preprocessing
+    : check if similar things are availbel in torch?
+
+> meet professor of Foundation of computational ai
+    :ask him about gene and disease whether the problem is too simplified.
+        => if it is, how can I fix it? add feature?
+        => if not, what would he suggest me to focus on to improve the overall accuracy?
+
+> code multi-label problem with deep learning
+> read and recreate code from node2vec, attentionwalk, and bine.
+    >read bine (focus on algorithm)
+    >implement bine
+
+> follow tutorial on pytorch
+    : object detction finetuning
+    url: https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html
+
+> add chatbot to the website
+> self drivng car with pytorch
+	:read https://towardsdatascience.com/deep-learning-for-self-driving-cars-7f198ef4cfa2
+	:use CARLA?
+> read about lstm, and gan from deep leanring book
+> learn fast.ai (by reading)
+	:come up with a project
+> recreate code from pytorch_geometric
+
+
+
+>>>>update<<<<
+-------utility_code
+>find an app that can search and store snippet code
+>merge the app to my_utility repo
+
+
+-------side_project
+> check AND fix why database does not update new data
+> add auto_increment_id to model of productivity database
+> add delete_by_id method to productivity class
+> check why only the first detail is selected.
+    :make sure that all of the detilas are selected.
+> create keyword dir for survey papers.
+    :create folder for papers/people/"name"/reserch topic
+        eg
+            papers/people/"name"/survey paper
+            papers/people/"name"/GNN
+            papers/people/"name"/CNN
+            ...
+    :write arrange_papers code to fit the new directory structure purposed above.
+
+> create view for django
+    > create option to plot productivity for a chosen period of time 5 days 10 days...
+    > add delete by text/date option
+
+
+
+-------research_related
+> add keywords to iot security with machine leanring and deep leanring papers survey
+
+
+-------example_code
+>find an app that can search and store snippet code
+>merge the app to my_utility repo
+
+
+-------courses
+>in coursea
+
+
+
+-------notes
+> do deep learning homework (deadline: end of 9/6/2019)
+> see if django folder and pytorch folder are qualified as stated in README.txt
+    :if no, make them qualified.
+
+
+
