@@ -19,6 +19,22 @@
     url: https://pythonprogramming.net/introduction-self-driving-autonomous-cars-carla-python/
 
 #--------todo 1 here>>
+> create MLP, svm, random forest 6.19pm (2 hour limit)
+> choose a topic to do for gene and disease (finally!!)
+    topics are as followed:
+    Comments:
+1.       Check GCN classifiers (which type of learning methods, GCN use for classification). Make sure that this classifier is consistent to the baseline classifier.
+    > write explaination on to report
+2.       Current results show that using embedding features as content for GCN is not more accurate than the baseline (this is likely consistent with the literature). Suggest to consider some additional content/feature information for gene and diease nodes.
+3.       Check class distributions of the four diease classes (Report average AUC values as well as classification results)
+4.       2/3-1/3 cross validations, and also try to check other classifiers (in addition to the logistic). Such dense network, svm, and random forest etc.
+5.       Check GCN settings, whether they have heterogeneous GCN netowrk.
+> create dataset to run on Zhabiz computer
+    :dataset is normalized gene and diseaset.
+
+> check whether or not I can use Jetson from dr zhu to build self driving car
+    :if the asnswer is yes, figure out what parts do I need to buy to fully build self seriving car.
+
 > check whether or not I can use Jetson from dr zhu to build self driving car
     :if the asnswer is yes, figure out what parts do I need to buy to fully build self seriving car.
 
