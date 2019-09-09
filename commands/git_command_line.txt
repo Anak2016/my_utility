@@ -27,6 +27,9 @@ git rev-parse --is-inside-work-tree
 #--------check if master branch exist
 git ls-remote origin master
 
+#--------unset git bare
+git config --unset core.bare
+
 #=====================
 #==large files
 #=====================

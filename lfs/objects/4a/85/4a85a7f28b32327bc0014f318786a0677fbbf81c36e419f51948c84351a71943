@@ -1,0 +1,12 @@
+## GNN Problem Set 
+> GNN Problem set is defined as problems that can be used using **GNN Technique**
+1. node classification
+--> single label
+--> multi labels
+3. link prediction
+4. heterogenous nodes classification
+5. graph classification
+6. point cloud classification
+7. node imbalances problem
+8. noises in graph
+9. unlabel problems

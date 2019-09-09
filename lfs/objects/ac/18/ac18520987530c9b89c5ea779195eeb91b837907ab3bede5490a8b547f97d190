@@ -1,0 +1,71 @@
+# GNN overview (no papers listed)
+> all papers will be listed in note under topic name listed in content layout
+<!-- toc -->
+
+- [GNN Problem Set](#GNN-Problem-Set)
+  * [Unlabel Data [GNN problem set]](#Unlabel-Data-GNN-problem-set)
+- [GNN technique](#GNN-technique)
+  * [Graph Kernels [GNN technique]](#Graph-Kernels-GNN-technique)
+  * [Graph Embeddings Types [GNN technique]](#Graph-Embeddings-Types-GNN-technique)
+
+<!-- tocstop -->
+## GNN Problem Set 
+> GNN Problem set is defined as problems that can be used using **GNN Technique**
+1. node classification
+  1.single label
+  2.multi labels
+3. link prediction
+4. heterogenous nodes classification
+5. graph classification
+6. point cloud classification
+7. node imbalances problem
+8. noises in graph
+9. unlabel problems
+
+### Unlabel Data [GNN problem set]
+> this section focus on techniques that were used to solved unlabel data problem 
+1. pseudo labels
+2. graph embedding
+
+
+## GNN technique
+> GNN technique is defined as types of techniques are used to solved **any problem set** not restricted to **GNN problem set**
+
+1. pooling
+  1.edges pooling
+  2.graph pooling
+2. attention
+3. unlabels
+-->  (topic detail can be find below)
+5. residual
+6. graph kernal 
+-->  (topic detail can be find below)
+5. graph embedding
+-->  (topic detail can be find below)
+6. streaming
+7. CNN for graph
+8. graph signature
+
+
+###  Graph Kernels [GNN technique]
+> in progress
+
+### Graph Embeddings Types [GNN technique]
+> this section focus on type of problem set in which graph embeddings are intended to solved
+1. class imbalances
+2. preservin graph structure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

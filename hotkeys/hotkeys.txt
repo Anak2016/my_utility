@@ -40,6 +40,8 @@ select "F"ile tab = alt + f
 	: alt + first latter of tab name = select that tab
 open documnetation lookup = ctrl + shift + d
 move to the closest/jump between matching caret = Ctrl+shift+m
+show autofill option = ctrl+space
+show argument = Ctrl + p
 
 -------File.md_hotkeys
 # = header1

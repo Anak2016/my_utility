@@ -6,3 +6,5 @@
 [remote "origin"]
 	url = https://github.com/Anak2016/my_utility.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
+[lfs "https://github.com/Anak2016/my_utility.git/info/lfs"]
+	access = basic
