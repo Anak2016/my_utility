@@ -1,0 +1,25 @@
+=============================
+== about research_related
+=============================
+> research_related is created to manage order of reading priority.
+    : reading priority must match with long term and short term task
+> reading list must contain expected deadline
+    : This is important to create realistic plan
+
+==============================
+== Rule
+==============================
+> leaf folders must contain the following folder
+    :read
+    :not read
+    :reading_list (in highest priority to lowest priority)
+> research_paper may be belonged to more than 1 folder
+    :one to many relationship
+    :This is intended to enhances ease of finding wanted_research_paper.
+>overview dir naming convention is as followed
+    :overview
+        >>name overview
+            >>>name type1 (tags + papers)
+            >>>name type2 (tags + papers)
+        >>name2 overview
+            ...
